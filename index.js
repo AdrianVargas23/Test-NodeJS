@@ -2,7 +2,7 @@ const http = require('node:http');
 const path = require('path');
 const { readFile } = require('./utils');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080 ;
 const availableFiles = ['index.html', 'about.html', 'contact-me.html'];
 
 const server = http.createServer(async (req, res) => {
